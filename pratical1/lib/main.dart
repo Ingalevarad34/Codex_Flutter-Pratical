@@ -9,11 +9,29 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
-        ),
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              color: Colors.deepOrange,
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              color: Color.fromARGB(255, 162, 205, 43),
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              color: Color.fromARGB(255, 83, 59, 217),
+              height: 100,
+              width: 100,
+            )
+          ],
+        )),
       ),
     );
   }
