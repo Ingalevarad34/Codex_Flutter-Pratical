@@ -11,58 +11,61 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("AppBar"),
+          backgroundColor: Colors.amber,
+        ),
         body: SizedBox(
+          height: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              Container(
+                height: 20,
+                margin: EdgeInsets.only(left: 160, top: 30,bottom: 10),
+                child: Text("First row", style: TextStyle(fontSize: 20),),
+              ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 255, 0, 0),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 0, 47, 255),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 88, 219, 95),
                   )
                 ],
               ),
+              Container(
+                margin: EdgeInsets.only(left: 160, top: 30 ,bottom: 10),
+                child: Text("Second row", style: TextStyle(fontSize: 20)),
+              ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 88, 219, 90),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 17, 0, 255),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 255, 0, 38),
                   )
                 ],
