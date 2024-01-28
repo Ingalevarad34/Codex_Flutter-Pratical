@@ -13,7 +13,7 @@ class _InstaAppState extends State<InstaApp> {
   bool favicon2 = false;
   bool favicon3 = false;
   bool bodycolor = false;
-  int count=0;
+  int count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -196,8 +196,8 @@ class _InstaAppState extends State<InstaApp> {
                   IconButton(
                       onPressed: () {
                         setState(() {
-                          count++;
-                          favicon1 =!favicon1;
+                          // count++;
+                          favicon1 = !favicon1;
                         });
                       },
                       icon: Icon(
@@ -229,8 +229,8 @@ class _InstaAppState extends State<InstaApp> {
               ),
               Container(
                   margin: EdgeInsets.only(left: 10),
-                  child: Text(
-                    '$count likes',
+                  child: const Text(
+                    "123 likes",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
@@ -321,6 +321,30 @@ class _InstaAppState extends State<InstaApp> {
                 ],
               ),
               Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: const Text(
+                    "503 likes",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "No need to be learned from own fault. We can learn a lot from others mistakes. -Chhatrapati Shivaji Maharaj",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "@quotes...more",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "View all 103 comments",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
                 margin: const EdgeInsets.only(top: 30),
                 child: Row(
                   children: [
@@ -389,6 +413,30 @@ class _InstaAppState extends State<InstaApp> {
                       )),
                 ],
               ),
+              Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: const Text(
+                    "123 likes",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "It is very important fort as the major fight with Afzal Khan took place here on 10'th November 1659.",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "@Forts...more",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "View all 123 comments",
+                    style: TextStyle(color: Colors.white),
+                  )),
             ],
           ),
         ),
