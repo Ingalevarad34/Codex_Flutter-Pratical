@@ -13,6 +13,7 @@ class _InstaAppState extends State<InstaApp> {
   bool favicon2 = false;
   bool favicon3 = false;
   bool bodycolor = false;
+  int count=0;
 
   @override
   Widget build(BuildContext context) {
@@ -171,12 +172,12 @@ class _InstaAppState extends State<InstaApp> {
                     Container(
                       margin: const EdgeInsets.only(left: 5),
                       child: const Text(
-                        "varad_ingale34",
+                        "varad_ingale34 with 2 other",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                     const SizedBox(
-                      width: 130,
+                      width: 96,
                     ),
                     IconButton(
                         onPressed: () {},
@@ -195,7 +196,8 @@ class _InstaAppState extends State<InstaApp> {
                   IconButton(
                       onPressed: () {
                         setState(() {
-                          favicon1 = !favicon1;
+                          count++;
+                          favicon1 =!favicon1;
                         });
                       },
                       icon: Icon(
@@ -215,7 +217,7 @@ class _InstaAppState extends State<InstaApp> {
                         color: Colors.white,
                       )),
                   const SizedBox(
-                    width: 120,
+                    width: 160,
                   ),
                   IconButton(
                       onPressed: () {},
@@ -227,14 +229,14 @@ class _InstaAppState extends State<InstaApp> {
               ),
               Container(
                   margin: EdgeInsets.only(left: 10),
-                  child: const Text(
-                    "126 likes",
+                  child: Text(
+                    '$count likes',
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "Happiness 😊 is having a bunch of freaking awesome and crazy friends",
+                    "Happiness 😊 is having a bunch of freaking awesome and crazy friends..",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
@@ -269,7 +271,7 @@ class _InstaAppState extends State<InstaApp> {
                       ),
                     ),
                     const SizedBox(
-                      width: 130,
+                      width: 170,
                     ),
                     IconButton(
                         onPressed: () {},
@@ -308,7 +310,7 @@ class _InstaAppState extends State<InstaApp> {
                         color: Colors.white,
                       )),
                   const SizedBox(
-                    width: 120,
+                    width: 160,
                   ),
                   IconButton(
                       onPressed: () {},
@@ -338,7 +340,7 @@ class _InstaAppState extends State<InstaApp> {
                       ),
                     ),
                     const SizedBox(
-                      width: 130,
+                      width: 170,
                     ),
                     IconButton(
                         onPressed: () {},
@@ -377,7 +379,7 @@ class _InstaAppState extends State<InstaApp> {
                         color: Colors.white,
                       )),
                   const SizedBox(
-                    width: 120,
+                    width: 160,
                   ),
                   IconButton(
                       onPressed: () {},
