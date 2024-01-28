@@ -227,29 +227,28 @@ class _InstaAppState extends State<InstaApp> {
               ),
               Container(
                   margin: EdgeInsets.only(left: 10),
-                  child:const Text(
+                  child: const Text(
                     "126 likes",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
-                  margin:const EdgeInsets.only(left: 10, top: 5),
-                  child:const Text(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
                     "Happiness 😊 is having a bunch of freaking awesome and crazy friends",
                     style: TextStyle(color: Colors.white),
                   )),
-                   Container(
-                  margin:const EdgeInsets.only(left: 10, top: 5),
-                  child:const Text(
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
                     "@FriendShip👑...more",
                     style: TextStyle(color: Colors.white),
                   )),
-                  Container(
-                  margin:const EdgeInsets.only(left: 10, top: 5),
-                  child:const Text(
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
                     "View all 3 comments",
                     style: TextStyle(color: Colors.white),
                   )),
-                  
               Container(
                 margin: const EdgeInsets.only(top: 30),
                 child: Row(
