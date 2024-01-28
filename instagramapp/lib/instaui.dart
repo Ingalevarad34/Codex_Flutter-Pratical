@@ -9,7 +9,11 @@ class InstaApp extends StatefulWidget {
 
 class _InstaAppState extends State<InstaApp> {
   bool favicon = false;
+  bool favicon1 = false;
+  bool favicon2 = false;
+  bool favicon3 = false;
   bool bodycolor = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +63,7 @@ class _InstaAppState extends State<InstaApp> {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 child: SingleChildScrollView(
@@ -85,7 +90,8 @@ class _InstaAppState extends State<InstaApp> {
                         height: 70,
                         decoration: BoxDecoration(
                             border: Border.all(
-                                color: Color.fromARGB(255, 46, 241, 46),width: 2),
+                                color: Color.fromARGB(255, 46, 241, 46),
+                                width: 2),
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                                 image: AssetImage("images/sahil.jpg"))),
@@ -98,7 +104,8 @@ class _InstaAppState extends State<InstaApp> {
                         height: 70,
                         decoration: BoxDecoration(
                             border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),width: 3),
+                                color: Color.fromARGB(255, 206, 5, 92),
+                                width: 3),
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                                 image: AssetImage("images/rohan.jpg"))),
@@ -110,8 +117,9 @@ class _InstaAppState extends State<InstaApp> {
                         width: 70,
                         height: 70,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),width: 3),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 206, 5, 92),
+                                width: 3),
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                                 image: AssetImage("images/parth.jpg"))),
@@ -123,8 +131,9 @@ class _InstaAppState extends State<InstaApp> {
                         width: 70,
                         height: 70,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),width: 3),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 206, 5, 92),
+                                width: 3),
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                                 image: AssetImage("images/shusi.jpg"))),
@@ -136,8 +145,9 @@ class _InstaAppState extends State<InstaApp> {
                         width: 70,
                         height: 70,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),width: 3),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 206, 5, 92),
+                                width: 3),
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                                 image: AssetImage("images/storypic.jpg"))),
@@ -183,10 +193,14 @@ class _InstaAppState extends State<InstaApp> {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
+                      onPressed: () {
+                        setState(() {
+                          favicon1 = !favicon1;
+                        });
+                      },
+                      icon: Icon(
                         Icons.favorite,
-                        color: Colors.white,
+                        color: favicon1 ? Colors.red : Colors.white,
                       )),
                   IconButton(
                       onPressed: () {},
@@ -212,6 +226,31 @@ class _InstaAppState extends State<InstaApp> {
                 ],
               ),
               Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child:const Text(
+                    "126 likes",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin:const EdgeInsets.only(left: 10, top: 5),
+                  child:const Text(
+                    "Happiness 😊 is having a bunch of freaking awesome and crazy friends",
+                    style: TextStyle(color: Colors.white),
+                  )),
+                   Container(
+                  margin:const EdgeInsets.only(left: 10, top: 5),
+                  child:const Text(
+                    "@FriendShip👑...more",
+                    style: TextStyle(color: Colors.white),
+                  )),
+                  Container(
+                  margin:const EdgeInsets.only(left: 10, top: 5),
+                  child:const Text(
+                    "View all 3 comments",
+                    style: TextStyle(color: Colors.white),
+                  )),
+                  
+              Container(
                 margin: const EdgeInsets.only(top: 30),
                 child: Row(
                   children: [
@@ -227,7 +266,7 @@ class _InstaAppState extends State<InstaApp> {
                       margin: const EdgeInsets.only(left: 5),
                       child: const Text(
                         "varad_ingale34",
-                        style: const TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                     const SizedBox(
@@ -248,10 +287,14 @@ class _InstaAppState extends State<InstaApp> {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
+                      onPressed: () {
+                        setState(() {
+                          favicon2 = !favicon2;
+                        });
+                      },
+                      icon: Icon(
                         Icons.favorite,
-                        color: Colors.white,
+                        color: favicon2 ? Colors.red : Colors.white,
                       )),
                   IconButton(
                       onPressed: () {},
@@ -313,10 +356,14 @@ class _InstaAppState extends State<InstaApp> {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
+                      onPressed: () {
+                        setState(() {
+                          favicon3 = !favicon3;
+                        });
+                      },
+                      icon: Icon(
                         Icons.favorite,
-                        color: Colors.white,
+                        color: favicon3 ? Colors.red : Colors.white,
                       )),
                   IconButton(
                       onPressed: () {},
