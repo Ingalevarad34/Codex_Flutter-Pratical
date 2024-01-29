@@ -158,38 +158,54 @@ class _InstaAppState extends State<InstaApp> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 15),
                 child: Row(
                   children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          width: 360,
+                          child: Image.asset("images/groupic.jpg"),
+                        ),
+                        Positioned(
+                            top: 7,
+                            left: 7,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: const DecorationImage(
+                                          image:
+                                              AssetImage("images/varad.jpg"))),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(left: 5),
+                                  child: const Text(
+                                    "varad_ingale34 with 2 other",
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 96,
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.more_vert,
+                                      color: Colors.white,
+                                    ))
+                              ],
+                            )),
+                      ],
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 5),
-                      child: const Text(
-                        "varad_ingale34 with 2 other",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 96,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.more_vert,
-                          color: Colors.white,
-                        ))
                   ],
                 ),
-              ),
-              Container(
-                child: Image.asset("images/groupic.jpg"),
               ),
               Row(
                 children: [
@@ -255,35 +271,51 @@ class _InstaAppState extends State<InstaApp> {
                 margin: const EdgeInsets.only(top: 30),
                 child: Row(
                   children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          width: 360,
+                          child: Image.asset("images/shiv.jpg"),
+                        ),
+                        Positioned(
+                            top: 7,
+                            left: 7,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: const DecorationImage(
+                                          image:
+                                              AssetImage("images/varad.jpg"))),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(left: 5),
+                                  child: const Text(
+                                    "varad_ingale34",
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 170,
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.more_vert,
+                                      color: Colors.white,
+                                    ))
+                              ],
+                            )),
+                      ],
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 5),
-                      child: const Text(
-                        "varad_ingale34",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 170,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.more_vert,
-                          color: Colors.white,
-                        ))
                   ],
                 ),
-              ),
-              Container(
-                child: Image.asset("images/shiv.jpg"),
               ),
               Row(
                 children: [
@@ -348,35 +380,51 @@ class _InstaAppState extends State<InstaApp> {
                 margin: const EdgeInsets.only(top: 30),
                 child: Row(
                   children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          width: 360,
+                          child: Image.asset("images/pratapgad.jpg"),
+                        ),
+                        Positioned(
+                            top: 7,
+                            left: 7,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: const DecorationImage(
+                                          image:
+                                              AssetImage("images/varad.jpg"))),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(left: 5),
+                                  child: const Text(
+                                    "varad_ingale34",
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 170,
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.more_vert,
+                                      color: Colors.white,
+                                    ))
+                              ],
+                            )),
+                      ],
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 5),
-                      child: const Text(
-                        "varad_ingale34",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 170,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.more_vert,
-                          color: Colors.white,
-                        ))
                   ],
                 ),
-              ),
-              Container(
-                child: Image.asset("images/pratapgad.jpg"),
               ),
               Row(
                 children: [
