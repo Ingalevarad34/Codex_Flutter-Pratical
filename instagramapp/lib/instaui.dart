@@ -21,7 +21,7 @@ class _InstaAppState extends State<InstaApp> {
       appBar: AppBar(
         title: const Text(
           "Instagram",
-          style: TextStyle(fontStyle: FontStyle.italic),
+          style: TextStyle(fontFamily: "Schyler"),
         ),
         backgroundColor: bodycolor
             ? const Color.fromARGB(255, 255, 255, 255)
@@ -71,87 +71,165 @@ class _InstaAppState extends State<InstaApp> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      const SizedBox(
-                        width: 7,
+                       const SizedBox(
+                        width: 9,
                       ),
                       Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/varad.jpg"),
-                                fit: BoxFit.cover)),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/varad.jpg"),
+                                      fit: BoxFit.cover)),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 46, 241, 46),
-                                width: 2),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/sahil.jpg"))),
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),
-                                width: 3),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/rohan.jpg"))),
-                      ),
-                      const SizedBox(
-                        width: 12,
+                       const SizedBox(
+                        width: 9,
                       ),
                       Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),
-                                width: 3),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/parth.jpg"))),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 46, 241, 46),
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/sahil.jpg"))),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      const SizedBox(
-                        width: 12,
+                       const SizedBox(
+                        width: 9,
                       ),
                       Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),
-                                width: 3),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/shusi.jpg"))),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 252, 1, 126),
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/rohan.jpg"))),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      const SizedBox(
-                        width: 12,
+                       const SizedBox(
+                        width: 9,
                       ),
                       Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 206, 5, 92),
-                                width: 3),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                                image: AssetImage("images/storypic.jpg"))),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color:  Color.fromARGB(255, 252, 1, 126),
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/parth.jpg"))),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                       const SizedBox(
+                        width: 9,
+                      ),
+                      Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 252, 1, 126),
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/shusi.jpg"))),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                       const SizedBox(
+                        width: 9,
+                      ),
+                      Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: const DecorationImage(
+                                      image: AssetImage("images/storypic.jpg"))),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Text(
+                                "Your Story",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -488,6 +566,23 @@ class _InstaAppState extends State<InstaApp> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.call, color: Colors.white),
+            label: "Calls",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera, color: Colors.white),
+            label: 'Camera',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat, color: Colors.white),
+            label: 'Chats',
+          ),
+        ],
       ),
     );
   }
