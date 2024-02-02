@@ -8,29 +8,43 @@ class ScreenOne extends StatefulWidget {
 }
 
 class _ScreenOneState extends State<ScreenOne> {
-  int? count = 0;
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('$count'),
+            Padding(padding: EdgeInsets.only(bottom: 50)),
             Container(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 40,
-                    width: 50,
-                    child: Text('$count'),
+                    width: 100,
+                    height: 30,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            count++;
+                          });
+                        },
+                        child: Text("Increment")),
+                        margin: EdgeInsets.only(right: 30),
                   ),
-                  ElevatedButton.icon(
-                      onPressed: () {
-                        setState(() {
-                          '$count++';
-                        });
-                      },
-                      icon: ButtonBar(),
-                      label: Text("Increment"))
+                  Container(
+                    width: 100,
+                    height: 30,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            count = 0;
+                          });
+                        },
+                        child: Text("Reset")),
+                  )
                 ],
               ),
             )
