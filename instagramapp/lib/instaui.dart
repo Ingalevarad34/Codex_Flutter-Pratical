@@ -34,7 +34,7 @@ class _InstaAppState extends State<InstaApp> {
                 });
               },
               icon: Icon(
-                Icons.favorite,
+                Icons.favorite_border_outlined,
                 color: favicon ? Colors.red : Colors.white,
               )),
           // IconButton(
@@ -71,164 +71,316 @@ class _InstaAppState extends State<InstaApp> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image: AssetImage("images/varad.jpg"),
-                                      fit: BoxFit.cover)),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Colors.yellow,
+                                      Colors.amber,
+                                      Color.fromARGB(255, 255, 119, 0),
+                                      Color.fromARGB(255, 244, 44, 13),
+                                      Color.fromARGB(235, 233, 30, 98),
+                                      Colors.purple,
+                                      Colors.purple,
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage("images/varad.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
                                 "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 46, 241, 46),
-                                      width: 2),
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image: AssetImage("images/sahil.jpg"))),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                      Color.fromARGB(255, 21, 255, 0),
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage("images/sahil.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
-                                "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                "_sahil_k18_",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 252, 1, 126),
-                                      width: 2),
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image: AssetImage("images/rohan.jpg"))),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Colors.yellow,
+                                      Colors.amber,
+                                      Color.fromARGB(255, 255, 119, 0),
+                                      Color.fromARGB(255, 244, 44, 13),
+                                      Color.fromARGB(235, 233, 30, 98),
+                                      Colors.purple,
+                                      Colors.purple,
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage("images/rohan.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
-                                "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                "_mr_rohan",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 252, 1, 126),
-                                      width: 2),
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image: AssetImage("images/parth.jpg"))),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Colors.yellow,
+                                      Colors.amber,
+                                      Color.fromARGB(255, 255, 119, 0),
+                                      Color.fromARGB(255, 244, 44, 13),
+                                      Color.fromARGB(235, 233, 30, 98),
+                                      Colors.purple,
+                                      Colors.purple,
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              "images/codeX-Logo.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
-                                "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                "codex_satara",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 252, 1, 126),
-                                      width: 2),
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image: AssetImage("images/shusi.jpg"))),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Colors.yellow,
+                                      Colors.amber,
+                                      Color.fromARGB(255, 255, 119, 0),
+                                      Color.fromARGB(255, 244, 44, 13),
+                                      Color.fromARGB(235, 233, 30, 98),
+                                      Colors.purple,
+                                      Colors.purple,
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage("images/shusi.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
-                                "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                "limbolesuho..",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: 15,
+                        ),
                         child: Column(
                           children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              height: 78,
+                              width: 78,
                               decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      width: 2),
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: const DecorationImage(
-                                      image:
-                                          AssetImage("images/storypic.jpg"))),
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [
+                                      Colors.yellow,
+                                      Colors.amber,
+                                      Color.fromARGB(255, 255, 119, 0),
+                                      Color.fromARGB(255, 244, 44, 13),
+                                      Color.fromARGB(235, 233, 30, 98),
+                                      Colors.purple,
+                                      Colors.purple,
+                                    ]),
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 73,
+                                  width: 73,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(36),
+                                      image: DecorationImage(
+                                          image: AssetImage("images/parth.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 5),
+                              height: 18,
+                              margin: EdgeInsets.only(top: 4),
                               child: Text(
-                                "Your Story",
-                                style: TextStyle(color: Colors.white),
+                                "_parth_2202",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -237,21 +389,48 @@ class _InstaAppState extends State<InstaApp> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   children: [
                     Container(
-                      width: 40,
-                      height: 40,
+                      margin: EdgeInsets.only(left: 10),
+                      height: 32,
+                      width: 32,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [
+                              Colors.yellow,
+                              Colors.amber,
+                              Color.fromARGB(255, 255, 119, 0),
+                              Color.fromARGB(255, 244, 44, 13),
+                              Color.fromARGB(235, 233, 30, 98),
+                              Colors.purple,
+                              Colors.purple,
+                            ]),
+                        borderRadius: BorderRadius.circular(38),
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 29,
+                          width: 29,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 0.5,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(14),
+                              image: DecorationImage(
+                                  image: AssetImage("images/codeX-Logo.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 5, right: 147),
+                      margin: const EdgeInsets.only(left: 5, right: 145),
                       child: const Text(
-                        "varad_ingale34 with 2 other",
+                        "codex_technologies_satara",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -265,25 +444,29 @@ class _InstaAppState extends State<InstaApp> {
                 ),
               ),
               Container(
-                child: Image.asset("images/groupic.jpg"),
+                child: Image.asset("images/codex.jpg"),
               ),
               Row(
                 children: [
                   IconButton(
                       onPressed: () {
                         setState(() {
-                          // count++;
                           favicon1 = !favicon1;
                         });
                       },
-                      icon: Icon(
-                        Icons.favorite,
-                        color: favicon1 ? Colors.red : Colors.white,
-                      )),
+                      icon: favicon1
+                          ? Icon(
+                              Icons.favorite_outlined,
+                              color: Colors.red,
+                            )
+                          : Icon(
+                              Icons.favorite_outline_sharp,
+                              color: Colors.white,
+                            )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
-                        Icons.message_outlined,
+                        Icons.messenger_outline_sharp,
                         color: Colors.white,
                       )),
                   IconButton(
@@ -293,12 +476,12 @@ class _InstaAppState extends State<InstaApp> {
                         color: Colors.white,
                       )),
                   const SizedBox(
-                    width: 160,
+                    width: 219,
                   ),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
-                        Icons.bookmark,
+                        Icons.bookmark_border_outlined,
                         color: Colors.white,
                       )),
                 ],
@@ -306,43 +489,70 @@ class _InstaAppState extends State<InstaApp> {
               Container(
                   margin: EdgeInsets.only(left: 10),
                   child: const Text(
-                    "123 likes",
+                    "111 likes",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "Happiness 😊 is having a bunch of freaking awesome and crazy friends..",
+                    "codex_technologies_satara Unlocking potentials 🖥️",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "@FriendShip👑...more",
-                    style: TextStyle(color: Colors.white),
+                    "...more",
+                    style: TextStyle(color: Colors.white38),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "View all 3 comments",
-                    style: TextStyle(color: Colors.white),
+                    "1 day ago",
+                    style: TextStyle(color: Colors.white38),
                   )),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   children: [
                     Container(
-                      width: 40,
-                      height: 40,
+                      margin: EdgeInsets.only(left: 10),
+                      height: 32,
+                      width: 32,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [
+                              Colors.yellow,
+                              Colors.amber,
+                              Color.fromARGB(255, 255, 119, 0),
+                              Color.fromARGB(255, 244, 44, 13),
+                              Color.fromARGB(235, 233, 30, 98),
+                              Colors.purple,
+                              Colors.purple,
+                            ]),
+                        borderRadius: BorderRadius.circular(38),
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 29,
+                          width: 29,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 0.5,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(14),
+                              image: DecorationImage(
+                                  image: AssetImage("images/sahil.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 5, right: 224),
+                      margin: const EdgeInsets.only(left: 5, right: 244),
                       child: const Text(
-                        "varad_ingale34",
+                        "_sahil_k18_",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -356,7 +566,7 @@ class _InstaAppState extends State<InstaApp> {
                 ),
               ),
               Container(
-                child: Image.asset("images/shiv.jpg"),
+                child: Image.asset("images/sahil.jpg"),
               ),
               Row(
                 children: [
@@ -366,14 +576,19 @@ class _InstaAppState extends State<InstaApp> {
                           favicon2 = !favicon2;
                         });
                       },
-                      icon: Icon(
-                        Icons.favorite,
-                        color: favicon2 ? Colors.red : Colors.white,
-                      )),
+                      icon: favicon2
+                          ? Icon(
+                              Icons.favorite_outlined,
+                              color: Colors.red,
+                            )
+                          : Icon(
+                              Icons.favorite_outline_sharp,
+                              color: Colors.white,
+                            )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
-                        Icons.message_outlined,
+                        Icons.messenger_outline_sharp,
                         color: Colors.white,
                       )),
                   IconButton(
@@ -383,32 +598,89 @@ class _InstaAppState extends State<InstaApp> {
                         color: Colors.white,
                       )),
                   const SizedBox(
-                    width: 160,
+                    width: 219,
                   ),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
-                        Icons.bookmark,
+                        Icons.bookmark_border_outlined,
                         color: Colors.white,
                       )),
                 ],
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                  margin: EdgeInsets.only(left: 10),
+                  child: const Text(
+                    "109 likes",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "cute❤️",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "View Comments",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "varad_ingale34 🔥🔥🔥",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "31 jan 2024",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   children: [
                     Container(
-                      width: 40,
-                      height: 40,
+                      margin: EdgeInsets.only(left: 10),
+                      height: 32,
+                      width: 32,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage("images/varad.jpg"))),
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [
+                              Colors.yellow,
+                              Colors.amber,
+                              Color.fromARGB(255, 255, 119, 0),
+                              Color.fromARGB(255, 244, 44, 13),
+                              Color.fromARGB(235, 233, 30, 98),
+                              Colors.purple,
+                              Colors.purple,
+                            ]),
+                        borderRadius: BorderRadius.circular(38),
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 29,
+                          width: 29,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 0.5,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(14),
+                              image: DecorationImage(
+                                  image: AssetImage("images/rohan.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 5, right: 224),
+                      margin: const EdgeInsets.only(left: 5, right: 250),
                       child: const Text(
-                        "varad_ingale34",
+                        "_mr_rohan",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -422,7 +694,7 @@ class _InstaAppState extends State<InstaApp> {
                 ),
               ),
               Container(
-                child: Image.asset("images/pratapgad.jpg"),
+                child: Image.asset("images/rohan.jpg"),
               ),
               Row(
                 children: [
@@ -432,10 +704,15 @@ class _InstaAppState extends State<InstaApp> {
                           favicon3 = !favicon3;
                         });
                       },
-                      icon: Icon(
-                        Icons.favorite,
-                        color: favicon3 ? Colors.red : Colors.white,
-                      )),
+                      icon: favicon3
+                          ? Icon(
+                              Icons.favorite_outlined,
+                              color: Colors.red,
+                            )
+                          : Icon(
+                              Icons.favorite_outline_sharp,
+                              color: Colors.white,
+                            )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -462,26 +739,173 @@ class _InstaAppState extends State<InstaApp> {
               Container(
                   margin: EdgeInsets.only(left: 10),
                   child: const Text(
-                    "123 likes",
+                    "125 likes",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "It is very important fort as the major fight with Afzal Khan took place here on 10'th November 1659.",
+                    "Click- samsung S22ultra💥💫",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "@Forts...more",
+                    "...more",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "View all 6 comments",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "varad_ingale34🔥🔥🔥",
                     style: TextStyle(color: Colors.white),
                   )),
               Container(
                   margin: const EdgeInsets.only(left: 10, top: 5),
                   child: const Text(
-                    "View all 123 comments",
+                    "_sahil_k18_🔥",
                     style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "2 May 2023",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      height: 32,
+                      width: 32,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [
+                              Colors.yellow,
+                              Colors.amber,
+                              Color.fromARGB(255, 255, 119, 0),
+                              Color.fromARGB(255, 244, 44, 13),
+                              Color.fromARGB(235, 233, 30, 98),
+                              Colors.purple,
+                              Colors.purple,
+                            ]),
+                        borderRadius: BorderRadius.circular(38),
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 29,
+                          width: 29,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 0.5,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(14),
+                              image: DecorationImage(
+                                  image: AssetImage("images/shusi.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 5, right: 209),
+                      child: const Text(
+                        "limbolesushoban",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.more_vert,
+                          color: Colors.white,
+                        ))
+                  ],
+                ),
+              ),
+              Container(
+                child: Image.asset("images/shusipost.jpg"),
+              ),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        setState(() {
+                          favicon3 = !favicon3;
+                        });
+                      },
+                      icon: favicon3
+                          ? Icon(
+                              Icons.favorite_outlined,
+                              color: Colors.red,
+                            )
+                          : Icon(
+                              Icons.favorite_outline_sharp,
+                              color: Colors.white,
+                            )),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.message_outlined,
+                        color: Colors.white,
+                      )),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.send,
+                        color: Colors.white,
+                      )),
+                  const SizedBox(
+                    width: 160,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.bookmark,
+                        color: Colors.white,
+                      )),
+                ],
+              ),
+              Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: const Text(
+                    "81 likes",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "Limbolesushobhan Traditional Day Special✌️",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "View all 11 comments",
+                    style: TextStyle(color: Colors.white38),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "varad_ingale34🔥🔥🔥",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(left: 10, top: 5),
+                  child: const Text(
+                    "30 May 2023",
+                    style: TextStyle(color: Colors.white38),
                   )),
             ],
           ),
