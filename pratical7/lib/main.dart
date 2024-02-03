@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pratical7/screenfour.dart';
+import 'package:pratical7/screenone.dart';
+// import 'package:pratical7/screenfour.dart';
 // import 'package:pratical7/screenthree.dart';
 // import 'package:pratical7/screentwo.dart';
-// import 'package:pratical7/screenone.dart';
+// import 'package:pratical7/screentwo.dart';
+import 'package:pratical7/screenone.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ScreenFour(),
+      home: ScreenOne(),
     );
   }
 }
