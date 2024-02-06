@@ -95,18 +95,18 @@ class _PortfolioUiState extends State<PortfolioUi> {
 
   Widget ImageCard(String image) {
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(35),
       height: 120,
       width: 120,
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage('$image')),
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
-            const BoxShadow(
-                blurRadius: 2,
+            BoxShadow(
+                color: Colors.grey.shade600,
                 spreadRadius: 1,
-                color: Colors.black,
-                offset: Offset(9, 9))
+                blurRadius: 15,
+                offset: const Offset(0, 15))
           ]),
     );
   }
@@ -182,10 +182,10 @@ class _PortfolioUiState extends State<PortfolioUi> {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              ImageCard("images/react-logo.png"),
-              ImageCard("images/flutter-logo.png"),
-              ImageCard("images/spring-logo.png"),
-              ImageCard("images/hibernate-logo.png"),
+              ImageCard("images/maria.png"),
+              ImageCard("images/mongodb.png"),
+              ImageCard("images/mysql.png"),
+              ImageCard("images/oracle.png"),
             ],
           ),
         ),
@@ -199,7 +199,7 @@ class _PortfolioUiState extends State<PortfolioUi> {
       return Container(
         margin: const EdgeInsets.only(left: 20, top: 10),
         child: const Text(
-          "Database : ",
+          "Tools : ",
           style: TextStyle(fontSize: 22),
         ),
       );
@@ -214,10 +214,10 @@ class _PortfolioUiState extends State<PortfolioUi> {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              ImageCard("images/react-logo.png"),
-              ImageCard("images/flutter-logo.png"),
-              ImageCard("images/spring-logo.png"),
-              ImageCard("images/hibernate-logo.png"),
+              ImageCard("images/git-img.png"),
+              ImageCard("images/github.png"),
+              ImageCard("images/postman.png"),
+              ImageCard("images/vs-logo.png"),
             ],
           ),
         ),
