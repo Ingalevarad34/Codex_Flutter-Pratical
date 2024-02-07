@@ -40,8 +40,8 @@ class _JavaUiState extends State<JavaUi> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextReuse("Introduction to java", IntroToJava()),
-              TextReuse("First step towards java", JavaNamingConvension()),
-              // TextReuse("Naming convensions"),
+              // TextReuse("First step towards java"),
+              TextReuse("Naming convensions", JavaNamingConvension()),
               // TextReuse("Commenting"),
               // TextReuse("Datatypes"),
               // TextReuse("Operators"),
