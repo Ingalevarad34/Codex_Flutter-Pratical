@@ -1,4 +1,7 @@
-import 'package:codexapp/javaui.dart';
+import 'package:codexapp/dartTopics/dartui.dart';
+import 'package:codexapp/javaTopics/javaui.dart';
+import 'package:codexapp/javascriptTopics/javascriptui.dart';
+import 'package:codexapp/pythonTopics/pythonui.dart';
 import 'package:flutter/material.dart';
 
 class CodeXapp extends StatefulWidget {
@@ -63,7 +66,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => JavaUi()));
+                    context, MaterialPageRoute(builder: (context) => DartUi()));
               },
               child: ImageCard("images/Dart-logo.png"),
             )),
@@ -71,7 +74,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => JavaUi()));
+                    context, MaterialPageRoute(builder: (context) => PythonUi()));
               },
               child: ImageCard("images/Python-logo.png"),
             )),
@@ -79,7 +82,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => JavaUi()));
+                    context, MaterialPageRoute(builder: (context) => JavascriptUi()));
               },
               child: ImageCard("images/js-logo.png"),
             )),

@@ -1,15 +1,13 @@
-import 'package:codexapp/introduction_to_java.dart';
-import 'package:codexapp/namingconvension.dart';
 import 'package:flutter/material.dart';
 
-class JavaUi extends StatefulWidget {
-  const JavaUi({super.key});
+class PythonUi extends StatefulWidget {
+  const PythonUi({super.key});
 
   @override
-  State<JavaUi> createState() => _JavaUiState();
+  State<PythonUi> createState() => _PythonUiState();
 }
 
-class _JavaUiState extends State<JavaUi> {
+class _PythonUiState extends State<PythonUi> {
   Widget TextReuse(String text, Widget Linkclass) {
     return Container(
       margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -30,7 +28,7 @@ class _JavaUiState extends State<JavaUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Java"),
+        title: const Text("Python"),
       ),
       body: Container(
         width: double.infinity,
@@ -39,9 +37,9 @@ class _JavaUiState extends State<JavaUi> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              TextReuse("Introduction to java", IntroToJava()),
+              // TextReuse("Introduction to java", IntroToJava()),
               // TextReuse("First step towards java"),
-              TextReuse("Naming convensions", JavaNamingConvension()),
+              // TextReuse("Naming convensions", JavaNamingConvension()),
               // TextReuse("Commenting"),
               // TextReuse("Datatypes"),
               // TextReuse("Operators"),
