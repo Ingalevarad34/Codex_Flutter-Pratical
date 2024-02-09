@@ -73,16 +73,16 @@ class _CodeXappState extends State<CodeXapp> {
             Container(
                 child: InkWell(
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => PythonUi()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PythonUi()));
               },
               child: ImageCard("images/Python-logo.png"),
             )),
             Container(
                 child: InkWell(
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => JavascriptUi()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => JavascriptUi()));
               },
               child: ImageCard("images/js-logo.png"),
             )),

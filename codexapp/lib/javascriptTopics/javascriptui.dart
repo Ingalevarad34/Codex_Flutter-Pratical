@@ -1,3 +1,4 @@
+import 'package:codexapp/javascriptTopics/topicPages/into_javascript.dart';
 import 'package:flutter/material.dart';
 
 class JavascriptUi extends StatefulWidget {
@@ -37,20 +38,7 @@ class _JavascriptUiState extends State<JavascriptUi> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // TextReuse("Introduction to java", IntroToJava()),
-              // TextReuse("First step towards java"),
-              // TextReuse("Naming convensions", JavaNamingConvension()),
-              // TextReuse("Commenting"),
-              // TextReuse("Datatypes"),
-              // TextReuse("Operators"),
-              // TextReuse("Control statements"),
-              // TextReuse("Input output"),
-              // TextReuse("Array"),
-              // TextReuse("Commandline arguments"),
-              // TextReuse("String"),
-              // TextReuse("Introduction to oop"),
-              // TextReuse("Constructor"),
-              // TextReuse("Polymorfism"),
+              TextReuse("Introduction to javascript", IntroToJavascript()),
             ],
           ),
         ),

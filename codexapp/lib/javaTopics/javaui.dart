@@ -12,6 +12,7 @@ class JavaUi extends StatefulWidget {
 class _JavaUiState extends State<JavaUi> {
   Widget TextReuse(String text, Widget Linkclass) {
     return Container(
+      width: 285,
       margin: const EdgeInsets.only(top: 10, bottom: 10),
       child: ElevatedButton(
         onPressed: () {
@@ -40,19 +41,19 @@ class _JavaUiState extends State<JavaUi> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextReuse("Introduction to java", IntroToJava()),
-              // TextReuse("First step towards java"),
-              TextReuse("Naming convensions", JavaNamingConvension()),
-              // TextReuse("Commenting"),
-              // TextReuse("Datatypes"),
-              // TextReuse("Operators"),
-              // TextReuse("Control statements"),
-              // TextReuse("Input output"),
-              // TextReuse("Array"),
-              // TextReuse("Commandline arguments"),
-              // TextReuse("String"),
-              // TextReuse("Introduction to oop"),
-              // TextReuse("Constructor"),
-              // TextReuse("Polymorfism"),
+              TextReuse("First step towards java", IntroToJava()),
+              TextReuse("Naming convensions", IntroToJava()),
+              TextReuse("Commenting", IntroToJava()),
+              TextReuse("Datatypes", IntroToJava()),
+              TextReuse("Operators", IntroToJava()),
+              TextReuse("Control statements", IntroToJava()),
+              TextReuse("Input output", IntroToJava()),
+              TextReuse("Array", IntroToJava()),
+              TextReuse("Commandline arguments", IntroToJava()),
+              TextReuse("String", IntroToJava()),
+              TextReuse("Introduction to oop", IntroToJava()),
+              TextReuse("Constructor", IntroToJava()),
+              TextReuse("Polymorfism", IntroToJava()),
             ],
           ),
         ),

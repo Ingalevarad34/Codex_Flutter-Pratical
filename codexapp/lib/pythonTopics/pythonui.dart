@@ -1,3 +1,4 @@
+import 'package:codexapp/pythonTopics/topicPages/introduction_to_python.dart';
 import 'package:flutter/material.dart';
 
 class PythonUi extends StatefulWidget {
@@ -37,20 +38,7 @@ class _PythonUiState extends State<PythonUi> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // TextReuse("Introduction to java", IntroToJava()),
-              // TextReuse("First step towards java"),
-              // TextReuse("Naming convensions", JavaNamingConvension()),
-              // TextReuse("Commenting"),
-              // TextReuse("Datatypes"),
-              // TextReuse("Operators"),
-              // TextReuse("Control statements"),
-              // TextReuse("Input output"),
-              // TextReuse("Array"),
-              // TextReuse("Commandline arguments"),
-              // TextReuse("String"),
-              // TextReuse("Introduction to oop"),
-              // TextReuse("Constructor"),
-              // TextReuse("Polymorfism"),
+              TextReuse("Introduction to python", IntroPython()),
             ],
           ),
         ),
