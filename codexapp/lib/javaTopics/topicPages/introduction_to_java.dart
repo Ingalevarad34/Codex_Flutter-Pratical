@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlighting/flutter_highlighting.dart';
 import 'package:flutter_highlighting/themes/github-dark-dimmed.dart';
 import 'package:highlighting/languages/dart.dart';
+import 'package:codexapp/CodesList/allCodes.dart';
 
 class IntroToJava extends StatefulWidget {
   const IntroToJava({super.key});
@@ -11,27 +12,30 @@ class IntroToJava extends StatefulWidget {
 }
 
 class _IntroToJavaState extends State<IntroToJava> {
-  String code1 = '''
-    class Demo{
-       public static void main(String[]args){
-          System.out.println("Hello World");
-       }
-    }
- ''';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Java naming convensions"),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: HighlightView(
-            code1,
-            languageId: dart.id,
-            theme: githubDarkDimmedTheme,
-          ),
+      body: Container(
+        child: ListView.builder(
+          itemCount: JavaCodes.Codes.length,
+          itemBuilder: (context, index) {
+            return Container(
+              child: Column(
+                children: [
+                  Container(
+                    child: HighlightView(
+                      "${JavaCodes.Codes[index]}",
+                      languageId: dart.id,
+                      theme: githubDarkDimmedTheme,
+                    ),
+                  )
+                ],
+              ),
+            );
+          },
         ),
       ),
     );

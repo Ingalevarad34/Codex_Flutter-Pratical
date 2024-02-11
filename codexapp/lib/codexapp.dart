@@ -1,8 +1,9 @@
 import 'package:codexapp/dartTopics/dartui.dart';
-import 'package:codexapp/javaTopics/javaui.dart';
+import 'package:codexapp/javaTopics/topicUI.dart';
 import 'package:codexapp/javascriptTopics/javascriptui.dart';
 import 'package:codexapp/pythonTopics/pythonui.dart';
 import 'package:flutter/material.dart';
+import 'package:codexapp/TopicsList/allTopics.dart';
 
 class CodeXapp extends StatefulWidget {
   const CodeXapp({super.key});
@@ -58,7 +59,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => JavaUi()));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", JavaTopics: JavaTopics)));
               },
               child: ImageCard("images/java-14-logo.png"),
             )),
@@ -66,7 +67,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => DartUi()));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", JavaTopics: DartTopics)));
               },
               child: ImageCard("images/Dart-logo.png"),
             )),
@@ -74,7 +75,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => PythonUi()));
+                    MaterialPageRoute(builder: (context) => TopicUi(appName: "PythonTopics", JavaTopics: JavaTopics)));
               },
               child: ImageCard("images/Python-logo.png"),
             )),
@@ -82,7 +83,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => JavascriptUi()));
+                    MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaScriptTopics", JavaTopics: JavaTopics)));
               },
               child: ImageCard("images/js-logo.png"),
             )),
