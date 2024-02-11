@@ -1,7 +1,6 @@
-import 'package:codexapp/javaTopics/topicPages/introduction_to_java.dart';
+import 'package:codexapp/CodeOutput/allCodesOutput.dart';
 import 'package:flutter/material.dart';
-import 'package:codexapp/TopicsList/allTopics.dart';
-
+import 'package:codexapp/CodesList/allCodes.dart';
 class TopicUi extends StatefulWidget {
   String? appName = '';
   List<dynamic>? JavaTopics;
@@ -23,7 +22,7 @@ class _TopicUiState extends State<TopicUi> {
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => IntroToJava()));
+              context, MaterialPageRoute(builder: (context) => AllCodes()));
         },
         child: Text(
           '$text',

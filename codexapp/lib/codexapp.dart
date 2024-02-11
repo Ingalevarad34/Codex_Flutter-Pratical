@@ -1,7 +1,4 @@
-import 'package:codexapp/dartTopics/dartui.dart';
-import 'package:codexapp/javaTopics/topicUI.dart';
-import 'package:codexapp/javascriptTopics/javascriptui.dart';
-import 'package:codexapp/pythonTopics/pythonui.dart';
+import 'package:codexapp/topicUI.dart';
 import 'package:flutter/material.dart';
 import 'package:codexapp/TopicsList/allTopics.dart';
 

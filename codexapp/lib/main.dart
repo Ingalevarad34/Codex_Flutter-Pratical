@@ -1,5 +1,5 @@
+import 'package:codexapp/loginpage.dart';
 import 'package:flutter/material.dart';
-import 'codexapp.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CodeXapp(),
+      home: LoginPage(),
     );
   }
 }
