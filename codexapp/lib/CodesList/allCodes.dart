@@ -1,6 +1,5 @@
 List Codes = [
- [
-   [
+  [
     '''
     class Demo{
        public static void main(String[]args){
@@ -31,10 +30,8 @@ List Codes = [
        }
     }
  ''',
-  ]
- ],
- [
-   [
+  ],
+  [
     '''
    void main(){
     print("intro to dart code 1");
@@ -60,5 +57,4 @@ List Codes = [
     }
  ''',
   ]
- ]
 ];
