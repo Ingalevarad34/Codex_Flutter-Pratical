@@ -5,29 +5,35 @@ import 'package:highlighting/languages/dart.dart';
 import 'package:codexapp/CodesList/allCodes.dart';
 
 class AllCodes extends StatefulWidget {
-  const AllCodes({super.key});
+  String? appBar;
+  List<dynamic>? CodesList = [];
+  AllCodes({super.key, this.appBar, this.CodesList});
 
   @override
-  State<AllCodes> createState() => _AllCodesState();
+  State<AllCodes> createState() => _AllCodesState(appBar, CodesList);
 }
 
 class _AllCodesState extends State<AllCodes> {
+  String? appBar;
+  List<dynamic>? CodesList = [];
+
+  _AllCodesState(this.appBar, this.CodesList);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Java naming convensions"),
+        title: Text('$appBar'),
       ),
       body: Container(
         child: ListView.builder(
-          itemCount: Codes.length,
+          itemCount: CodesList!.length,
           itemBuilder: (context, index) {
             return Container(
               child: Column(
                 children: [
                   Container(
                     child: HighlightView(
-                      "${Codes[index]}",
+                      "${CodesList![index]}",
                       languageId: dart.id,
                       theme: githubDarkDimmedTheme,
                     ),

@@ -56,7 +56,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", JavaTopics: JavaTopics)));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", Topics: JavaTopics)));
               },
               child: ImageCard("images/java-14-logo.png"),
             )),
@@ -64,7 +64,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", JavaTopics: DartTopics)));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", Topics: DartTopics)));
               },
               child: ImageCard("images/Dart-logo.png"),
             )),
@@ -72,7 +72,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TopicUi(appName: "PythonTopics", JavaTopics: JavaTopics)));
+                    MaterialPageRoute(builder: (context) => TopicUi(appName: "PythonTopics", Topics: JavaTopics)));
               },
               child: ImageCard("images/Python-logo.png"),
             )),
@@ -80,7 +80,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaScriptTopics", JavaTopics: JavaTopics)));
+                    MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaScriptTopics", Topics: JavaTopics)));
               },
               child: ImageCard("images/js-logo.png"),
             )),
