@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   highlight: ^0.7.0
   flutter_highlighting: ^0.9.0+11.8.0
+  blurrycontainer: ^1.0.2
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
