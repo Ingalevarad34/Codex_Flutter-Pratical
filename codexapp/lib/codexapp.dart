@@ -1,6 +1,8 @@
 import 'package:codexapp/topicUI.dart';
 import 'package:flutter/material.dart';
 import 'package:codexapp/TopicsList/allTopics.dart';
+import 'package:codexapp/CodesList/javacodes.dart';
+import 'package:codexapp/CodesList/dartcodes.dart';
 
 class CodeXapp extends StatefulWidget {
   const CodeXapp({super.key});
@@ -11,12 +13,6 @@ class CodeXapp extends StatefulWidget {
 
 class _CodeXappState extends State<CodeXapp> {
   int count = 0;
-
-  // void reload() {
-  //   setState(() {
-
-  //   });
-  // }
 
   Widget languages() {
     return Container(
@@ -56,7 +52,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", Topics: JavaTopics)));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", Topics: JavaTopics,CodesList:javacodes)));
               },
               child: ImageCard("images/java-14-logo.png"),
             )),
@@ -64,7 +60,7 @@ class _CodeXappState extends State<CodeXapp> {
                 child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", Topics: DartTopics)));
+                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", Topics: DartTopics,CodesList:dartcodes)));
               },
               child: ImageCard("images/Dart-logo.png"),
             )),

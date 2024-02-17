@@ -28,18 +28,28 @@ class _AllCodesState extends State<AllCodes> {
         child: ListView.builder(
           itemCount: CodesList!.length,
           itemBuilder: (context, index) {
-            return Container(
-              child: Column(
+            return Column(
+              children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    child: HighlightView(
-                      "${CodesList![index]}",
-                      languageId: dart.id,
-                      theme: githubDarkDimmedTheme,
-                    ),
-                  )
+                   Container(
+                    margin: const EdgeInsets.all(20),
+                    child:  Text('Program ${index + 1}'),
+                   )
                 ],
               ),
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  width: MediaQuery.of(context).size.width,
+                  child: HighlightView(
+                    "${CodesList![index]}",
+                    padding: const EdgeInsets.all(15),
+                    languageId: dart.id,
+                    theme: githubDarkDimmedTheme,
+                  ),
+                )
+              ],
             );
           },
         ),

@@ -5,28 +5,19 @@ import 'package:codexapp/CodesList/allCodes.dart';
 class TopicUi extends StatefulWidget {
   String? appName = '';
   List<dynamic>? Topics;
-  List<dynamic>? topicCodes = [];
-  TopicUi({super.key, this.appName, this.Topics});
+  List<dynamic>? CodesList = [];
+  TopicUi({super.key, this.appName, this.Topics, this.CodesList});
 
   @override
-  State<TopicUi> createState() => _TopicUiState(appName, Topics);
+  State<TopicUi> createState() => _TopicUiState(appName, Topics, CodesList);
 }
 
 class _TopicUiState extends State<TopicUi> {
   String? appName = '';
   List? Topics = [];
-  // List<dynamic>? topicCodes = [];
+  List<dynamic>? CodesList = [];
 
-  // Widget topicCode() {
-  //   return ListView.builder(
-  //     itemCount: Codes.length,
-  //     itemBuilder: (context, index) {
-  //       topicCodes![index] = Codes[index];
-  //     },
-  //   );
-  // }
-
-  _TopicUiState(this.appName, this.Topics);
+  _TopicUiState(this.appName, this.Topics, this.CodesList);
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +42,7 @@ class _TopicUiState extends State<TopicUi> {
                             MaterialPageRoute(
                                 builder: (context) => AllCodes(
                                       appBar: "${Topics![index]}",
-                                      CodesList: Codes[index],
+                                      CodesList: CodesList![index],
                                     )));
                       },
                       child: Text(
