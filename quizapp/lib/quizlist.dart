@@ -1,17 +1,17 @@
-List<Map> Questions = [
+List<Map> questions = [
   {
-    "question": "founder of Bjp",
-    "option": ["lk adani", "modi", "fadnavis", "amit"],
-    "answer" : 0,
+    "questions": "Founder of BJP",
+    "options": ["Advani", " Modi", "Amit shah", "Fadanvis"],
+    "correctAnswer": 1
   },
   {
-    "question": "founder of Congress",
-    "option": ["gandhi", "nehru", "indra", "rahul"],
-    "answer" : 3,
+    "questions": "Founder of Congress",
+    "options": ["Rahul gandhi", " mohandas gandhi", "Nehru ", "Indira Gandhi"],
+    "correctAnswer": 3
   },
   {
-    "question": "founder of Shivsena",
-    "option": ["Thakre", "shinde", "udhav", "raj"],
-    "answer" : 2,
+    "questions": "Founder of Shivsena",
+    "options": ["Balasaheb", " Raj thakre", "Uddhav Thakre", "Shinde"],
+    "correctAnswer": 1
   },
 ];
