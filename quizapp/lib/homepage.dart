@@ -8,9 +8,62 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int questionIndex = 0;
+  int questionIndex = -1;
   int selectedIndex = -1;
   int score = 0;
+
+  Widget welcomePage() {
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/bg1.jpeg"), fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 50,
+              ),
+              const Text(
+                "Welcome To Our Quiz App",
+                style: TextStyle(fontSize: 25),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Text(
+                'Total Marks ${questions.length}',
+                style: const TextStyle(fontSize: 22),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 30, right: 10),
+                child: const Text(
+                  "Your grade will be showned at the result time",
+                  style: TextStyle(fontSize: 22),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        questionIndex = 0;
+                      });
+                    },
+                    child: const Text("Start Quiz")),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget scorePage() {
     return Scaffold(
@@ -85,6 +138,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    if (questionIndex == -1) {
+      return welcomePage();
+    }
     if (questionIndex == 3) {
       return scorePage();
     }
