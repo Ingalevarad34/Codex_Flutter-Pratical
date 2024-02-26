@@ -1,23 +1,20 @@
 import 'package:codexapp/CodeOutput/allCodesOutput.dart';
 import 'package:flutter/material.dart';
-import 'package:codexapp/CodesList/allCodes.dart';
 
 class TopicUi extends StatefulWidget {
   String? appName = '';
-  List<dynamic>? Topics;
-  List<dynamic>? CodesList = [];
-  TopicUi({super.key, this.appName, this.Topics, this.CodesList});
+  List? CodesList = [];
+  TopicUi({super.key, this.appName, this.CodesList});
 
   @override
-  State<TopicUi> createState() => _TopicUiState(appName, Topics, CodesList);
+  State<TopicUi> createState() => _TopicUiState(appName, CodesList);
 }
 
 class _TopicUiState extends State<TopicUi> {
   String? appName = '';
-  List? Topics = [];
-  List<dynamic>? CodesList = [];
+  List? CodesList = [];
 
-  _TopicUiState(this.appName, this.Topics, this.CodesList);
+  _TopicUiState(this.appName, this.CodesList);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class _TopicUiState extends State<TopicUi> {
       ),
       body: Container(
         child: ListView.builder(
-          itemCount: Topics!.length,
+          itemCount: CodesList!.length,
           itemBuilder: (context, index) {
             return Container(
               child: Column(
@@ -41,12 +38,12 @@ class _TopicUiState extends State<TopicUi> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => AllCodes(
-                                      appBar: "${Topics![index]}",
+                                      appBar: CodesList![index]["title"],
                                       CodesList: CodesList![index],
                                     )));
                       },
                       child: Text(
-                        "${Topics![index]}",
+                        "${CodesList![index]["title"]}",
                         style: const TextStyle(fontSize: 22),
                       ),
                     ),

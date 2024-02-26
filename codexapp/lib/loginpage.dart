@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: OutlinedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const CodeXapp()));

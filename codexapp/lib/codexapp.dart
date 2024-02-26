@@ -1,8 +1,8 @@
 import 'package:codexapp/topicUI.dart';
 import 'package:flutter/material.dart';
-import 'package:codexapp/TopicsList/allTopics.dart';
 import 'package:codexapp/CodesList/javacodes.dart';
 import 'package:codexapp/CodesList/dartcodes.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class CodeXapp extends StatefulWidget {
   const CodeXapp({super.key});
@@ -27,10 +27,9 @@ class _CodeXappState extends State<CodeXapp> {
   Widget ImageCard(String image) {
     return Container(
       margin: const EdgeInsets.only(top: 20, right: 20, bottom: 35, left: 20),
-      height: 120,
-      width: 120,
+      width: 150,
       decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('$image')),
+          image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
@@ -43,45 +42,60 @@ class _CodeXappState extends State<CodeXapp> {
   }
 
   Widget languagesWidgets() {
-    return Container(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            Container(
-                child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaTopics", Topics: JavaTopics,CodesList:javacodes)));
-              },
-              child: ImageCard("images/java-14-logo.png"),
-            )),
-            Container(
-                child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => TopicUi(appName: "DartTopics", Topics: DartTopics,CodesList:dartcodes)));
-              },
-              child: ImageCard("images/Dart-logo.png"),
-            )),
-            Container(
-                child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TopicUi(appName: "PythonTopics", Topics: JavaTopics)));
-              },
-              child: ImageCard("images/Python-logo.png"),
-            )),
-            Container(
-                child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TopicUi(appName: "JavaScriptTopics", Topics: JavaTopics)));
-              },
-              child: ImageCard("images/js-logo.png"),
-            )),
-          ],
+    return CarouselSlider(
+      items: [
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/java-14-logo.png"),
         ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "DartTopics", CodesList: dartcodes)));
+          },
+          child: ImageCard("images/Dart-logo.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "PythonTopics", CodesList: dartcodes)));
+          },
+          child: ImageCard("images/Python-logo.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaScriptTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/js-logo.png"),
+        )
+      ],
+      options: CarouselOptions(
+        autoPlay: true,
+        initialPage: 0,
+        reverse: false,
+        autoPlayInterval: const Duration(seconds: 3),
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        autoPlayCurve: Curves.fastOutSlowIn,
+        enlargeCenterPage: true,
+        viewportFraction: 0.5,
+        height: 200,
+        enlargeFactor: 0.225,
       ),
     );
   }
@@ -97,18 +111,61 @@ class _CodeXappState extends State<CodeXapp> {
   }
 
   Widget FrameWorkWidgets() {
-    return Container(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            ImageCard("images/react-logo.png"),
-            ImageCard("images/flutter-logo.png"),
-            ImageCard("images/spring-logo.png"),
-            ImageCard("images/hibernate-logo.png"),
-          ],
+    return CarouselSlider(
+      items: [
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/react-logo.png"),
         ),
-      ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/flutter-logo.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/spring-logo.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/hibernate-logo.png"),
+        )
+      ],
+      options: CarouselOptions(
+          autoPlay: true,
+          aspectRatio: 16 / 7,
+          initialPage: 0,
+          reverse: true,
+          viewportFraction: 0.5,
+          height: 200,
+          autoPlayInterval: const Duration(seconds: 3),
+          autoPlayAnimationDuration: const Duration(milliseconds: 800),
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enlargeCenterPage: true,
+          enlargeFactor: 0.225),
     );
   }
 
@@ -123,18 +180,61 @@ class _CodeXappState extends State<CodeXapp> {
   }
 
   Widget DatabaseWidgets() {
-    return Container(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            ImageCard("images/maria.png"),
-            ImageCard("images/mongodb.png"),
-            ImageCard("images/mysql.png"),
-            ImageCard("images/oracle.png"),
-          ],
+    return CarouselSlider(
+      items: [
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/maria.png"),
         ),
-      ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/mongodb.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/mysql.png"),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TopicUi(appName: "JavaTopics", CodesList: javacodes)));
+          },
+          child: ImageCard("images/oracle.png"),
+        )
+      ],
+      options: CarouselOptions(
+          autoPlay: true,
+          aspectRatio: 16 / 7,
+          initialPage: 0,
+          reverse: false,
+          viewportFraction: 0.5,
+          height: 200,
+          autoPlayInterval: const Duration(seconds: 3),
+          autoPlayAnimationDuration: const Duration(milliseconds: 800),
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enlargeCenterPage: true,
+          enlargeFactor: 0.225),
     );
   }
 
@@ -149,25 +249,70 @@ class _CodeXappState extends State<CodeXapp> {
   }
 
   Widget ToolsWidgets() {
-    return Container(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            ImageCard("images/git-img.png"),
-            ImageCard("images/github.png"),
-            ImageCard("images/postman.png"),
-            ImageCard("images/vs-logo.png"),
-          ],
-        ),
-      ),
-    );
+    return Builder(builder: (context) {
+      return CarouselSlider(
+        items: [
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TopicUi(
+                            appName: "JavaTopics", CodesList: javacodes)));
+              },
+              child: ImageCard("images/github.png")),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => TopicUi(
+                          appName: "JavaTopics", CodesList: javacodes)));
+            },
+            child: ImageCard("images/github.png"),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => TopicUi(
+                          appName: "JavaTopics", CodesList: javacodes)));
+            },
+            child: ImageCard("images/postman.png"),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => TopicUi(
+                          appName: "JavaTopics", CodesList: javacodes)));
+            },
+            child: ImageCard("images/vs-logo.png"),
+          )
+        ],
+        options: CarouselOptions(
+            autoPlay: true,
+            aspectRatio: 16 / 7,
+            initialPage: 0,
+            reverse: true,
+            viewportFraction: 0.5,
+            height: 200,
+            autoPlayInterval: const Duration(seconds: 3),
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            autoPlayCurve: Curves.fastOutSlowIn,
+            enlargeCenterPage: true,
+            enlargeFactor: 0.225),
+      );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           "CodeX",
           style: TextStyle(fontSize: 22, color: Color.fromARGB(255, 0, 0, 0)),
@@ -182,8 +327,7 @@ class _CodeXappState extends State<CodeXapp> {
       ),
       // floatingActionButton:
       //     IconButton(onPressed: reload, icon: const Icon(Icons.add)),
-      body: Container(
-        height: double.infinity,
+      body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -191,19 +335,21 @@ class _CodeXappState extends State<CodeXapp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    languages(),
-                    languagesWidgets(),
-                    FrameWork(),
-                    FrameWorkWidgets(),
-                    Database(),
-                    DatabaseWidgets(),
-                    Tools(),
-                    ToolsWidgets(),
-                  ],
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      languages(),
+                      languagesWidgets(),
+                      FrameWork(),
+                      FrameWorkWidgets(),
+                      Database(),
+                      DatabaseWidgets(),
+                      Tools(),
+                      ToolsWidgets(),
+                    ],
+                  ),
                 ),
               )
             ],
