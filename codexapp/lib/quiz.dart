@@ -15,6 +15,7 @@ class _QuizHomeState extends State<QuizHome> {
   int questionIndex = -1;
   int selectedIndex = -1;
   int score = 0;
+  bool isEnabled = false;
 
   Widget welcomePage() {
     return Scaffold(
@@ -124,7 +125,10 @@ class _QuizHomeState extends State<QuizHome> {
     if (selectedIndex != -1) {
       if (buttonIndex == selectedIndex) {
         if (selectedIndex == questions[questionIndex]["correctAnswer"]) {
-          score = questionIndex + 1;
+          if (isEnabled == true) {
+            score++;
+            print(score);
+          }
           return const MaterialStatePropertyAll(Colors.green);
         } else {
           return const MaterialStatePropertyAll(Colors.red);
@@ -159,6 +163,7 @@ class _QuizHomeState extends State<QuizHome> {
           if (questionIndex < questions.length) {
             setState(() {
               questionIndex++;
+              isEnabled = false;
             });
           } else {
             setState(() {
@@ -209,11 +214,14 @@ class _QuizHomeState extends State<QuizHome> {
             height: 20,
           ),
           ElevatedButton(
-            onPressed: () {
-              setState(() {
-                selectedIndex = 0;
-              });
-            },
+            onPressed: isEnabled
+                ? null
+                : () {
+                    setState(() {
+                      selectedIndex = 0;
+                      isEnabled = !isEnabled;
+                    });
+                  },
             style: ButtonStyle(
                 backgroundColor: checkAns(0),
                 fixedSize: const MaterialStatePropertyAll(Size(330, 20))),
@@ -223,11 +231,14 @@ class _QuizHomeState extends State<QuizHome> {
             height: 15,
           ),
           ElevatedButton(
-            onPressed: () {
-              setState(() {
-                selectedIndex = 1;
-              });
-            },
+            onPressed: isEnabled
+                ? null
+                : () {
+                    setState(() {
+                      selectedIndex = 1;
+                      isEnabled = !isEnabled;
+                    });
+                  },
             style: ButtonStyle(
                 backgroundColor: checkAns(1),
                 fixedSize: const MaterialStatePropertyAll(Size(330, 20))),
@@ -237,11 +248,14 @@ class _QuizHomeState extends State<QuizHome> {
             height: 15,
           ),
           ElevatedButton(
-            onPressed: () {
-              setState(() {
-                selectedIndex = 2;
-              });
-            },
+            onPressed: isEnabled
+                ? null
+                : () {
+                    setState(() {
+                      selectedIndex = 2;
+                      isEnabled = !isEnabled;
+                    });
+                  },
             style: ButtonStyle(
                 backgroundColor: checkAns(2),
                 fixedSize: const MaterialStatePropertyAll(Size(330, 20))),
@@ -251,11 +265,14 @@ class _QuizHomeState extends State<QuizHome> {
             height: 15,
           ),
           ElevatedButton(
-            onPressed: () {
-              setState(() {
-                selectedIndex = 3;
-              });
-            },
+            onPressed: isEnabled
+                ? null
+                : () {
+                    setState(() {
+                      selectedIndex = 3;
+                      isEnabled = !isEnabled;
+                    });
+                  },
             style: ButtonStyle(
                 backgroundColor: checkAns(3),
                 fixedSize: const MaterialStatePropertyAll(Size(330, 20))),
