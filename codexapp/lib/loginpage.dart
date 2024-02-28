@@ -10,6 +10,27 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String username = '';
+  String password = '';
+
+  Future check() {
+    return showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text("Invalid email address or wrong password"),
+        content: const Text("Press Okay to retry"),
+        actions: <Widget>[
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(ctx).pop();
+            },
+            child: const Text("okay"),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +42,8 @@ class _LoginPageState extends State<LoginPage> {
           child: SingleChildScrollView(
             child: Container(
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white38),
+                  border: Border.all(
+                      color: const Color.fromARGB(97, 255, 255, 255)),
                   borderRadius: BorderRadius.circular(20)),
               child: BlurryContainer(
                 height: 498,
@@ -29,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     Center(
-                      child: Container(
+                      child: SizedBox(
                           width: 200,
                           height: 100,
                           child: Image.asset('images/applogo1.png')),
@@ -37,23 +59,44 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       padding: const EdgeInsets.only(
                           left: 15.0, right: 15.0, top: 15, bottom: 0),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                      child: TextFormField(
+                        initialValue: '',
+                        decoration: const InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white)),
                           labelText: 'Username',
-                          hintText: 'Enter valid Username',
+                          hintText: 'Enter valid Email Address',
                         ),
+                        onChanged: (value) {
+                          username = value;
+                        },
                       ),
                     ),
                     Container(
                       padding: const EdgeInsets.only(
                           left: 15.0, right: 15.0, top: 15, bottom: 0),
-                      child: const TextField(
+                      child: TextFormField(
+                        initialValue: '',
                         obscureText: true,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Password',
-                            hintText: 'Enter secure password'),
+                        decoration: const InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white)),
+                          labelText: 'Password',
+                          hintText: 'Enter your secure password',
+                        ),
+                        onChanged: (value) {
+                          password = value;
+                        },
                       ),
                     ),
                     Row(
@@ -82,10 +125,15 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: OutlinedButton(
                         onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const CodeXapp()));
+                          username == "ingalevarad34@gmail.com" &&
+                                  password == "varad@34"
+                              ? Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const CodeXapp(),
+                                  ),
+                                )
+                              : check();
                         },
                         child: const Text(
                           'Login',
@@ -103,23 +151,21 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(
                       height: 15,
                     ),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 50,
-                            child: Image.asset("images/google.png"),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(left: 15),
-                            height: 50,
-                            width: 50,
-                            child: Image.asset("images/apple.png"),
-                          )
-                        ],
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 50,
+                          width: 50,
+                          child: Image.asset("images/google.png"),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(left: 15),
+                          height: 50,
+                          width: 50,
+                          child: Image.asset("images/apple.png"),
+                        )
+                      ],
                     )
                   ],
                 ),
