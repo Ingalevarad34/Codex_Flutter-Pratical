@@ -1,3 +1,4 @@
+import 'package:codexapp/loginpage.dart';
 import 'package:codexapp/topicUI.dart';
 import 'package:flutter/material.dart';
 import 'package:codexapp/CodesList/javacodes.dart';
@@ -5,14 +6,40 @@ import 'package:codexapp/CodesList/dartcodes.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class CodeXapp extends StatefulWidget {
-  const CodeXapp({super.key});
+  String username;
+  CodeXapp({super.key, required this.username});
 
   @override
-  State<CodeXapp> createState() => _CodeXappState();
+  State<CodeXapp> createState() => _CodeXappState(username);
 }
 
 class _CodeXappState extends State<CodeXapp> {
+  String username;
+  _CodeXappState(this.username);
   int count = 0;
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   Widget languages() {
     return Container(
@@ -69,8 +96,8 @@ class _CodeXappState extends State<CodeXapp> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) =>
-                        TopicUi(appName: "PythonTopics", CodesList: dartcodes)));
+                    builder: (context) => TopicUi(
+                        appName: "PythonTopics", CodesList: dartcodes)));
           },
           child: ImageCard("images/Python-logo.png"),
         ),
@@ -79,8 +106,8 @@ class _CodeXappState extends State<CodeXapp> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) =>
-                        TopicUi(appName: "JavaScriptTopics", CodesList: javacodes)));
+                    builder: (context) => TopicUi(
+                        appName: "JavaScriptTopics", CodesList: javacodes)));
           },
           child: ImageCard("images/js-logo.png"),
         )
@@ -312,7 +339,6 @@ class _CodeXappState extends State<CodeXapp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         title: const Text(
           "CodeX",
           style: TextStyle(fontSize: 22, color: Color.fromARGB(255, 0, 0, 0)),
@@ -334,26 +360,79 @@ class _CodeXappState extends State<CodeXapp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      languages(),
-                      languagesWidgets(),
-                      FrameWork(),
-                      FrameWorkWidgets(),
-                      Database(),
-                      DatabaseWidgets(),
-                      Tools(),
-                      ToolsWidgets(),
-                    ],
-                  ),
+              SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    languages(),
+                    languagesWidgets(),
+                    FrameWork(),
+                    FrameWorkWidgets(),
+                    Database(),
+                    DatabaseWidgets(),
+                    Tools(),
+                    ToolsWidgets(),
+                  ],
                 ),
               )
             ],
           ),
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(username),
+            ),
+            ListTile(
+              title: const Text('Home'),
+              selected: _selectedIndex == 0,
+              onTap: () {
+                _onItemTapped(0);
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Batch'),
+              selected: _selectedIndex == 1,
+              onTap: () {
+                _onItemTapped(1);
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Logout'),
+              selected: _selectedIndex == 2,
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    title:
+                        const Text("Do you want to Logout"),
+                    content: const Text("Press Okay to logout"),
+                    actions: <Widget>[
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginPage()));
+                        },
+                        child: const Text("Logout"),
+                      ),
+                    ],
+                  ),
+                );
+                _onItemTapped(2);
+              },
+            ),
+          ],
         ),
       ),
     );
